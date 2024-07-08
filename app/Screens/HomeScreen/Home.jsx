@@ -6,6 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import HomeTable from "./HomeTable";
 
 export default function Home() {
+  // These are commnets
   return (
     <View className="w-full h-full bg-gray-900 flex flex-row">
       <SideBar />
