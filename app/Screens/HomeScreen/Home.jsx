@@ -1,18 +1,43 @@
-import React, { Component } from 'react'
-import { Text, View } from 'react-native'
-import SideBar from './../../components/sideNavigation/SideBar';
+import React, { Component } from "react";
+import {   StyleSheet, Text, View,  } from "react-native";
+import SideBar from "./../../components/sideNavigation/SideBar";
+import { LinearGradient } from 'expo-linear-gradient';
 
-export default class Home extends Component {
-  render() {
-    return (
-      <View className="w-full h-full bg-gray-900 flex flex-row">
-        
+import HomeTable from "./HomeTable";
+
+export default function Home() {
+  return (
+    <View className="w-full h-full bg-gray-900 flex flex-row">
       <SideBar />
-      <View className="mt-20">
-        <Text className="text-white text-2xl -mt-14">HELLO</Text>
+
+      <LinearGradient
+      // Button Linear Gradient
+      colors={['#4c669f', '#3b5998', '#192f6a']}
+      style={styles.background}
+    >
+      <View className="w-3/4">
+      <HomeTable />
       </View>
-      
-      </View>
-    )
-  }
+
+      </LinearGradient>
+
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    color: 'white',
+    fontSize: 20,
+  },
+});
+
+

@@ -20,7 +20,9 @@ export default function SideBar () {
            >
               <Ionicons name="settings" size={30} color="white" />
            </TouchableOpacity>
-           <TouchableOpacity className="p-6 border border-gray-700 rounded-full mb-3">
+           <TouchableOpacity className="p-6 border border-gray-700 rounded-full mb-3"
+           onPress={() => navigation.navigate('DigitalInput')}
+           >
               <Ionicons name="settings" size={30} color="white" />
            </TouchableOpacity>
            <TouchableOpacity className="p-6 border border-gray-700 rounded-full mb-3"
